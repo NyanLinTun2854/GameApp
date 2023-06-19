@@ -3,14 +3,14 @@ import { Game } from "../types";
 import GameCard from "../GameCard/Index";
 
 interface Props {
-  err?: "string";
+  err?: string;
   games: Game[];
 }
 const GameList = ({ err, games }: Props): JSX.Element => {
   if (err) {
     return <p>Unable to fetch data</p>;
   }
-  if (games?.length) {
+  if (games?.length === 0) {
     return <p>No games available</p>;
   }
 
@@ -24,3 +24,5 @@ const GameList = ({ err, games }: Props): JSX.Element => {
     </ul>
   );
 };
+
+export default GameList;

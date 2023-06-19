@@ -1,7 +1,8 @@
 import React from "react";
+import GameList from "../GameList/GameList.container";
 
-const Home = () => {
-  return <div>Home</div>;
+const Home = (): JSX.Element => {
+  return <GameList />;
 };
 
 export default Home;
